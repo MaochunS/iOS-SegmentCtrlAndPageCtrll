@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     
     lazy var pageViewControl : UIPageViewController = {
         let pageViewCtrl = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageViewCtrl.view.frame = CGRect.init(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height - 100)
+        pageViewCtrl.view.frame = CGRect.init(x: 0, y: 130, width: self.view.frame.width, height: self.view.frame.height - 100)
         pageViewCtrl.delegate = self
         pageViewCtrl.dataSource = self
         
@@ -107,8 +107,10 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .black
         
         let vc1 = Test1ViewController()
+        vc1.view.backgroundColor = .red
         vc1.view.tag = 0
         let vc2 = Test2ViewController()
+        vc2.view.backgroundColor = .green
         vc2.view.tag = 1
         self.viewControllerArr.append(vc1)
         self.viewControllerArr.append(vc2)
